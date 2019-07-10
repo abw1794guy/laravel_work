@@ -14,7 +14,7 @@ class SeedCategoriesData extends Migration
                 'description' => '分享創造，分享發現',
             ],
             [
-                'name'        => '教程',
+                'name'        => '教學',
                 'description' => '開發技巧、推薦擴展包等',
             ],
             [
