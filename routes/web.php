@@ -42,3 +42,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 //  個人資料路由
 Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit']]);
 Route::get('/users/{user}', 'UsersController@show')->name('users.show');
+
+Route::resource('topics', 'TopicsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
