@@ -8,12 +8,21 @@
   <div class="col-lg-9 col-md-9 topic-list">
     <div class="card ">
 
+<div class="card ">
       <div class="card-header bg-transparent">
         <ul class="nav nav-pills">
-          <li class="nav-item"><a class="nav-link active" href="#">最後回覆</a></li>
-          <li class="nav-item"><a class="nav-link" href="#">最新發布</a></li>
+          <li class="nav-item">
+            <a class="nav-link {{ active_class( ! if_query('order', 'recent')) }}" href="{{ Request::url() }}?order=default">
+              最後回覆
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link {{ active_class(if_query('order', 'recent')) }}" href="{{ Request::url() }}?order=recent">
+              最新文章
+            </a>
+          </li>
         </ul>
-      </div>
+</div>
 
       <div class="card-body">
         {{-- 話題列表 --}}
