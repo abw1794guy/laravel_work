@@ -6,10 +6,10 @@ $factory->define(App\Models\Topic::class, function (Faker $faker) {
 
     $sentence = $faker->sentence();
 
-    // 随机取一个月以内的时间
+    // 隨機取一個月以內的時間
     $updated_at = $faker->dateTimeThisMonth();
 
-    // 传参为生成最大时间不超过，因为创建时间需永远比更改时间要早
+    // 傳參為生成最大時間不超過，因為創建時間需永遠比更改時間要早
     $created_at = $faker->dateTimeThisMonth($updated_at);
 
     return [
