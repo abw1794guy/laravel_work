@@ -26,14 +26,14 @@
               <img src="https://about.yunchieh.cloud/images/avatar.jpg" class="img-responsive img-circle" width="30px" height="30px">
               {{ Auth::user()->name }}
             </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="">個人資料</a>
-              <a class="dropdown-item" href="">編輯資料</a>
+             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="{{ route('users.show', Auth::id()) }}">個人中心</a>
+              <a class="dropdown-item" href="{{ route('users.edit', Auth::id()) }}">編輯資料</a>
               <div class="dropdown-divider"></div>
               <a class="dropdown-item" id="logout" href="#">
                 <form action="{{ route('logout') }}" method="POST">
                   {{ csrf_field() }}
-                  <button class="btn btn-block btn-danger" type="submit" name="button">退出</button>
+                  <button class="btn btn-block btn-danger" type="submit" name="button">登出</button>
                 </form>
               </a>
             </div>

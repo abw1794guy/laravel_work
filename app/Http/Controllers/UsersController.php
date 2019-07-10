@@ -4,10 +4,24 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Http\Requests\UserRequest;
 class UsersController extends Controller
 {
+    //顯示資料
     public function show(User $user)
     {
-        return view('users.show',compact('user'));
+        return view('users.show', compact('user'));
     }
+    //編輯資料
+    public function edit(User $user)
+    {
+        return view('users.edit', compact('user'));
+    }
+    //更新個人資料
+    public function update(UserRequest $request, User $user)
+    {
+        $user->update($request->all());
+        return redirect()->route('users.show', $user->id)->with('success', '個人資料更新成功！');
+    }
+
 }
