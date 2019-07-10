@@ -1,6 +1,6 @@
 @extends('layouts.app')
 
-@section('title', '話題列表')
+@section('title', isset($category) ? $category->name : '文章列表')
 
 @section('content')
 

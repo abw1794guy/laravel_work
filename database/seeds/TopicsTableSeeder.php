@@ -27,7 +27,7 @@ class TopicsTableSeeder extends Seeder
             // 從用戶 ID 數組中隨機取出一個並賦值
             $topic->user_id = $faker->randomElement($user_ids);
 
-            // 話題分類，同上
+            // 文章分類，同上
             $topic->category_id = $faker->randomElement($category_ids);
         });
 

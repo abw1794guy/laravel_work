@@ -44,3 +44,5 @@ Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit'
 Route::get('/users/{user}', 'UsersController@show')->name('users.show');
 
 Route::resource('topics', 'TopicsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+//文章類別
+Route::resource('categories', 'CategoriesController', ['only' => ['show']]);
