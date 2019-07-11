@@ -23,7 +23,7 @@ class TopicsController extends Controller
     }
     public function show(Topic $topic)
     {
-        return view('topics.show', compact('topic'));
+         return view('topics.show', compact('topic'));
     }
 
 	public function create(Topic $topic)
@@ -84,4 +84,5 @@ class TopicsController extends Controller
         }
         return $data;
     }
+
 }

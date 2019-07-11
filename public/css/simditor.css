@@ -585,7 +585,9 @@
   z-index: 10;
   box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
 }
-
+.simditor-body img {
+  max-width:100%;
+}
 .simditor .simditor-body, .editor-style {
   font-size: 16px;
   font-family: arial, sans-serif;
