@@ -27,7 +27,7 @@ class UsersTableSeeder extends Seeder
                         ->each(function ($user, $index)
                             use ($faker, $avatars)
         {
-        // 從頭像數組中隨機取出一個並賦值
+            // 從頭像數組中隨機取出一個並賦值
             $user->avatar = $faker->randomElement($avatars);
         });
 
