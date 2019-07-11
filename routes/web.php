@@ -43,7 +43,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::resource('users', 'UsersController', ['only' => ['show', 'update', 'edit']]);
 Route::get('/users/{user}', 'UsersController@show')->name('users.show');
 
-Route::resource('topics', 'TopicsController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+Route::resource('topics', 'TopicsController', ['only' => ['index', 'create', 'store', 'update', 'edit', 'destroy']]);
 //文章類別
 Route::resource('categories', 'CategoriesController', ['only' => ['show']]);
 
@@ -51,3 +51,4 @@ Route::resource('categories', 'CategoriesController', ['only' => ['show']]);
 Route::post('upload_image', 'TopicsController@uploadImage')->name('topics.upload_image');
 
 Route::resource('replies', 'RepliesController', ['only' => ['index', 'show', 'create', 'store', 'update', 'edit', 'destroy']]);
+Route::get('topics/{topic}/{slug?}', 'TopicsController@show')->name('topics.show');

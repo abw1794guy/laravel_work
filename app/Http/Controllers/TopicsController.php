@@ -23,7 +23,7 @@ class TopicsController extends Controller
     }
     public function show(Topic $topic)
     {
-         return view('topics.show', compact('topic'));
+        return view('topics.show', compact('topic'));
     }
 
 	public function create(Topic $topic)
@@ -38,7 +38,7 @@ class TopicsController extends Controller
         $topic->user_id = Auth::id();
         $topic->save();
 
-        return redirect()->route('topics.show', $topic->id)->with('success', '文章建立成功！');
+        return redirect()->to($topic->link())->with('success', '文章建立成功！');
     }
 
 	 public function edit(Topic $topic)
