@@ -9,7 +9,7 @@
   <!-- CSRF Token -->
   <meta name="csrf-token" content="{{ csrf_token() }}">
 
-  <title>@yield('title', ' L論壇') Laravle練功</title>
+  <title>@yield('title', ' ＣＨＩＥＨ的論壇') Laravle練功</title>
 
   <!-- Styles -->
   <link href="{{ mix('css/app.css') }}" rel="stylesheet">
