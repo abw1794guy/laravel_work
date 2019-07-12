@@ -3,8 +3,8 @@
 use App\Models\Topic;
 
 return [
-    'title'   => '話題',
-    'single'  => '話題',
+    'title'   => '文章',
+    'single'  => '文章',
     'model'   => Topic::class,
 
     'columns' => [
@@ -13,7 +13,7 @@ return [
             'title' => 'ID',
         ],
         'title' => [
-            'title'    => '話題',
+            'title'    => '文章',
             'sortable' => false,
             'output'   => function ($value, $model) {
                 return '<div style="max-width:260px">' . model_link($value, $model) . '</div>';

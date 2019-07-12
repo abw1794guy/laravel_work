@@ -26,7 +26,7 @@ function model_link($title, $model, $prefix = '')
     // 初始化前綴
     $prefix = $prefix ? "/$prefix/" : '/';
 
-    // 使用站點 URL 拼接全量 URL
+    // 使用論壇 URL 拼接全量 URL
     $url = config('app.url') . $prefix . $model_name . '/' . $model->id;
 
     // 拼接 HTML A 標簽，並返回

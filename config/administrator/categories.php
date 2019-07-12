@@ -11,7 +11,7 @@ return [
     'action_permissions' => [
         // 刪除權限控制
         'delete' => function () {
-            // 只有站長才能刪除話題分類
+            // 只有站長才能刪除分類
             return Auth::user()->hasRole('Founder');
         },
     ],

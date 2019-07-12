@@ -12,7 +12,7 @@ class ReplysTableSeeder extends Seeder
         // 所有用戶 ID 數組，如：[1,2,3,4]
         $user_ids = User::all()->pluck('id')->toArray();
 
-        // 所有話題 ID 數組，如：[1,2,3,4]
+        // 所有 ID 數組，如：[1,2,3,4]
         $topic_ids = Topic::all()->pluck('id')->toArray();
 
         // 獲取 Faker 實例
@@ -27,7 +27,7 @@ class ReplysTableSeeder extends Seeder
             // 從用戶 ID 數組中隨機取出一個並賦值
             $reply->user_id = $faker->randomElement($user_ids);
 
-            // 話題 ID，同上
+            //  ID，同上
             $reply->topic_id = $faker->randomElement($topic_ids);
         });
 

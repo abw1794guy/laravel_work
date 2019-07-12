@@ -29,7 +29,7 @@
 </div>
 
       <div class="card-body">
-        {{-- 話題列表 --}}
+        {{-- 列表 --}}
         @include('topics._topic_list', ['topics' => $topics])
         {{-- 分頁 --}}
         <div class="mt-5">

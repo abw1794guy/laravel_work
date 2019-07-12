@@ -29,7 +29,7 @@ return [
             },
         ],
         'topic' => [
-            'title'    => '話題',
+            'title'    => '文章',
             'sortable' => false,
             'output'   => function ($value, $model) {
                 return '<div style="max-width:260px">' . model_admin_link($model->topic->title, $model->topic) . '</div>';
@@ -50,7 +50,7 @@ return [
             'options_sort_field' => 'id',
         ],
         'topic' => [
-            'title'              => '話題',
+            'title'              => '文章',
             'type'               => 'relationship',
             'name_field'         => 'title',
             'autocomplete'       => true,
@@ -72,7 +72,7 @@ return [
             'options_sort_field' => 'id',
         ],
         'topic' => [
-            'title'              => '話題',
+            'title'              => '文章',
             'type'               => 'relationship',
             'name_field'         => 'title',
             'autocomplete'       => true,

@@ -8,7 +8,7 @@ return array(
     // 後台專屬域名，沒有的話可以留空
     'domain' => '',
 
-    // 應用名稱，在頁面標題和左上角站點名稱處顯示
+    // 應用名稱，在頁面標題和左上角論壇名稱處顯示
     'title' => env('APP_NAME', 'Laravel'),
 
     // 模型配置信息文件存放目錄
@@ -47,7 +47,7 @@ return array(
             'topics',
             'replies',
         ],
-        '站點管理' => [
+        '論壇管理' => [
             'settings.site',
         ],
     ],
@@ -62,7 +62,6 @@ return array(
         // 只要是能管理內容的用戶，就允許訪問後台
         return Auth::check() && Auth::user()->can('manage_contents');
     },
-
     /*
      * 使用布爾值來設定是否使用後台主頁面。
      *
@@ -75,13 +74,13 @@ return array(
     'dashboard_view' => '',
 
     // 用來作為後台主頁的菜單條目，由 `use_dashboard` 選項決定，菜單指的是 `menu` 選項
-    'home_page' => 'users',
+    'home_page' => 'topics',
 
     // 右上角『返回主站』按鈕的鏈接
     'back_to_site_path' => '/',
 
     // 當選項 `permission` 權限檢測不通過時，會重定向用戶到此處設置的路徑
-    'login_path' => 'login',
+    'login_path' => 'permission-denied',
 
     // 允許在登錄成功後使用 Session::get('redirect') 將用戶重定向到原本想要訪問的後台頁面
     'login_redirect_key' => 'redirect',

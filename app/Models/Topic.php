@@ -45,7 +45,7 @@ class Topic extends Model
 
     public function scopeRecentReplied($query)
     {
-        // 當話題有新回覆時，我們將編寫邏輯來更新話題模型的 reply_count 屬性，
+        // 當有新回覆時，我們將編寫邏輯來更新模型的 reply_count 屬性，
         // 此時會自動觸發框架對數據模型 updated_at 時間戳的更新
         return $query->orderBy('updated_at', 'desc');
     }

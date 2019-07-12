@@ -14,7 +14,7 @@ class ReplyObserver
     public function created(Reply $reply)
     {
         $reply->topic->updateReplyCount();
-        // 通知話題作者有新的評論
+        // 通知作者有新的評論
         $reply->topic->user->notify(new TopicReplied($reply));
     }
 
