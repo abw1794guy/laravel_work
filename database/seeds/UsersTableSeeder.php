@@ -37,12 +37,13 @@ class UsersTableSeeder extends Seeder
         // 插入到數據庫中
         User::insert($user_array);
 
-        // 單獨處理第一個用戶的數據
-        $user = User::find(1);
-        $user->name = 'Summer';
-        $user->email = 'summer@example.com';
-        $user->avatar = 'https://cdn.learnku.com/uploads/images/201710/14/1/ZqM7iaP4CR.png';
-        $user->save();
+        // 初始化用戶角色，將 1 號用戶指派為『站長』
+        $user->assignRole('Founder');
+
+        // 將 2 號用戶指派為『管理員』
+        $user = User::find(2);
+        $user->assignRole('Maintainer');
 
     }
+
 }
