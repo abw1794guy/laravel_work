@@ -57,4 +57,26 @@ class User extends Authenticatable implements MustVerifyEmailContract
         $this->save();
         $this->unreadNotifications->markAsRead();
     }
+    public function setPasswordAttribute($value)
+    {
+        // 如果值的長度等於 60，即認為是已經做過加密的情況
+        if (strlen($value) != 60) {
+
+            // 不等於 60，做密碼加密處理
+            $value = bcrypt($value);
+        }
+
+        $this->attributes['password'] = $value;
+    }
+    public function setAvatarAttribute($path)
+    {
+        // 如果不是 `http` 子串開頭，那就是從後台上傳的，需要補全 URL
+        if ( ! starts_with($path, 'http')) {
+
+            // 拼接完整的 URL
+            $path = config('app.url') . "/uploads/images/avatars/$path";
+        }
+
+        $this->attributes['avatar'] = $path;
+    }
 }
