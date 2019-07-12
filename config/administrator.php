@@ -36,7 +36,7 @@ return array(
      *      'Analytics' => ['E-Commerce' => 'page.pages.analytics'],
      *  ]
      */
-    'menu' => [
+     'menu' => [
         '用戶與權限' => [
             'users',
             'roles',
@@ -46,6 +46,9 @@ return array(
             'categories',
             'topics',
             'replies',
+        ],
+        '站點管理' => [
+            'settings.site',
         ],
     ],
 
