@@ -31,5 +31,10 @@ class AuthServiceProvider extends ServiceProvider
             // 動態返回模型對應的策略名稱，如：// 'App\Model\User' => 'App\Policies\UserPolicy',
             return 'App\Policies\\'.class_basename($modelClass).'Policy';
         });
+
+        \Horizon::auth(function ($request) {
+            // 是否是站长
+            return \Auth::user()->hasRole('Founder');
+        });
     }
 }

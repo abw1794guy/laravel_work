@@ -8,15 +8,11 @@ class Policy
 {
     use HandlesAuthorization;
 
-    public function __construct()
-    {
-        //
-    }
-
     public function before($user, $ability)
-	{
-	    // if ($user->isSuperAdmin()) {
-	    // 		return true;
-	    // }
-	}
+    {
+        // 如果用戶擁有管理內容的權限的話，即授權通過
+        if ($user->can('manage_contents')) {
+            return true;
+        }
+    }
 }

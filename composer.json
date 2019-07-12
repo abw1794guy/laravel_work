@@ -14,12 +14,15 @@
         "hieu-le/active": "~3.5",
         "intervention/image": "^2.5",
         "laravel/framework": "5.8.*",
+        "laravel/horizon": "~1.0",
         "laravel/tinker": "^1.0",
         "mews/captcha": "~2.0",
         "mews/purifier": "^2.1",
         "overtrue/laravel-lang": "~3.0",
         "overtrue/pinyin": "~3.0",
-        "spatie/laravel-permission": "~2.29"
+        "spatie/laravel-permission": "~2.29",
+        "summerblue/administrator": "~1.1",
+        "viacreative/sudo-su": "~1.1"
     },
     "require-dev": {
         "barryvdh/laravel-debugbar": "~3.2",
